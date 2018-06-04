@@ -1,0 +1,66 @@
+{
+  "name": "sharedmemclientlib",
+  "version": "1.0.0",
+  "description": "Shared memory for client applications. Share data between clients (v1 raw data, trust client 100%)(v2 - blockchain security, do not trust client anymore).",
+  "main": "build/lib/sharedmemclientlib.js",
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ]
+  },
+  "scripts": {
+    "test": "ava tests",
+    "teste2e": "ava testse2e",
+    "test:unit": "ava -s",
+    "build": "rimraf build && babel src/lib -d build/lib && babel src/modules -d build/modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miikkij/sharedmemclientlib/"
+  },
+  "keywords": [
+    "sharedmemclientlib",
+    "sharedmem",
+    "javascript",
+    "service"
+  ],
+  "author": "Jouni Miikki",
+  "license": "Copyright (c) 2018 Jouni Miikki",
+  "dependencies": {
+    "apisauce": "^0.15.1",
+    "axios-cookiejar-support": "^0.3.5",
+    "azure-storage": "^2.8.2",
+    "browser-or-node": "^1.0.2",
+    "npm": "^6.0.1",
+    "socket.io-client": "^2.1.1",
+    "tough-cookie": "^2.3.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "ava": "^0.19.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-ramda": "^1.2.0",
+    "babel-preset-es2015": "^6.24.1",
+    "ramdasauce": "^2.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "react/forbid-prop-types": "['off', { forbid: ['any', 'array', 'object'] }]",
+      "arrow-body-style": [
+        "error",
+        "always"
+      ]
+    },
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}
